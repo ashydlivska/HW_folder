@@ -1,0 +1,4 @@
+SELECT City FROM [Customers]
+GROUP BY City
+ORDER BY Count (*) DESC
+LIMIT 5;

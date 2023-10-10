@@ -1,0 +1,5 @@
+SELECT EmployeeID, LastName, FirstName FROM [Employees]
+WHERE (SELECT EmployeeID FROM [Orders]
+GROUP BY EmployeeID
+ORDER BY count (*) DESC)
+LIMIT 5;

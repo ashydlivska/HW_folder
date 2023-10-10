@@ -1,0 +1,5 @@
+SELECT * FROM [Customers]
+WHERE (SELECT CustomerID FROM [Orders]
+WHERE (SELECT OrderID FROM [OrderDetails]
+ORDER BY Quantity DESC))
+LIMIT 5;

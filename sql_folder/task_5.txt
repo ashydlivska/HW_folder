@@ -1,0 +1,5 @@
+SELECT * FROM Products
+FULL JOIN Categories on Products.CategoryID = Categories.CategoryID
+UNION
+SELECT * from Categories
+RIGHT JOIN Products on Categories.CategoryID = Products.CategoryID
